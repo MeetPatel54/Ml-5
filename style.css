@@ -1,4 +1,4 @@
-/* General Styles */
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,124 +6,173 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'BMW Type Next', Arial, sans-serif;
     line-height: 1.6;
-    background-color: #1a1a1a;
-    color: #ffffff;
+    color: #262626;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #2d2d2d;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #1c69d4;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 h1 {
-    text-align: center;
-    color: #3498db;
-    margin-bottom: 2rem;
+    font-size: 2.5em;
+    margin-bottom: 30px;
 }
 
-/* Status Styles */
+h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+}
+
+/* Status styles */
 .status {
     text-align: center;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: #363636;
-    border-radius: 5px;
-    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1c69d4;
+    font-size: 1.2em;
 }
 
-/* Upload Section */
+/* Upload section styles */
 .upload-section {
     text-align: center;
-    margin: 2rem 0;
+    margin-bottom: 40px;
 }
 
+.upload-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #1c69d4;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #1c69d4;
+}
+
+.upload-button:hover {
+    background-color: #fff;
+    color: #1c69d4;
+}
+
+.info {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Preview section styles */
+.preview-section {
+    text-align: center;
+}
+
+.image-container {
+    max-width: 100%;
+    margin-bottom: 30px;
+    border: 3px solid #1c69d4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(28, 105, 212, 0.2);
+}
+
+#preview-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Results styles */
+.results-container {
+    margin-top: 40px;
+}
+
+.predictions {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Progress bar styles */
+.prediction-item {
+    margin-bottom: 15px;
+}
+
+.prediction-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.prediction-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.prediction-progress {
+    height: 100%;
+    background-color: #1c69d4;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Button styles */
+.reset-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #262626;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.reset-button:hover {
+    background-color: #1c69d4;
+}
+
+/* Utility classes */
 .hidden {
     display: none;
 }
 
-.upload-button {
-    display: block;
-    padding: 2rem;
-    margin: 1rem auto;
-    border: 2px dashed #3498db;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #363636;
-    color: #ffffff;
-}
-
-.upload-button:hover {
-    background-color: #404040;
-    border-color: #2980b9;
-}
-
-.info {
-    color: #888;
-    font-size: 0.9rem;
-}
-
-/* Preview Section */
-.preview-section {
-    margin-top: 2rem;
-}
-
-.image-container {
-    max-width: 400px;
-    margin: 1rem auto;
-}
-
-#preview-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Results Section */
-.results-container {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: #363636;
-    border-radius: 5px;
-}
-
-.predictions {
-    margin-top: 1rem;
-}
-
-.prediction-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    background-color: #404040;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.confidence-bar {
-    height: 20px;
-    background-color: #3498db;
-    border-radius: 10px;
-    transition: width 0.3s ease;
-}
-
-/* Loading Spinner */
+/* Loading spinner */
 .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #1c69d4;
+    border-radius: 50%;
     width: 50px;
     height: 50px;
-    border: 5px solid #363636;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    margin: 1rem auto;
     animation: spin 1s linear infinite;
+    margin: 30px auto;
 }
 
 @keyframes spin {
@@ -131,41 +180,41 @@ h1 {
     100% { transform: rotate(360deg); }
 }
 
-/* Reset Button */
-.reset-button {
-    display: block;
-    margin: 2rem auto;
-    padding: 0.8rem 1.5rem;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.reset-button:hover {
-    background-color: #2980b9;
-}
-
-/* Success and Error States */
-.success {
-    background-color: #2ecc71;
-    color: #fff;
-}
-
-.error {
-    color: #e74c3c;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
+/* Responsive design */
+@media (max-width: 768px) {
     .container {
-        margin: 1rem;
-        padding: 1rem;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
     }
 
     .upload-button {
-        padding: 1rem;
+        padding: 12px 24px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .upload-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
     }
 }
